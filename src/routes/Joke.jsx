@@ -18,11 +18,10 @@ const Joke = ({user}) => {
         fetch(ultimateJokeURL)
             .then(response => response.json())
             .then(data =>setJoke(data.jokes)
-
             ).catch(err => {
                 console.error(err)
         });
-        const url = user.roles.split(',').includes('user') ? '/info/user' : '/info/admin';
+            const url = user.roles.split(',').includes('user') ? '/info/user' : '/info/admin';
         facade.fetchData(url).then(res => {
 
             console.log(res);

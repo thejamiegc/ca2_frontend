@@ -9,6 +9,7 @@ const Header = ({loggedIn, login, user, logout}) => {
             <li id="link"><NavLink to={"/"}>Home</NavLink></li>
             <li id="link"><NavLink to="/about">About</NavLink></li>
             <li id="link"><NavLink to="/joke">Jokes</NavLink></li>
+            <li id="link"><NavLink to="/weather">Weather</NavLink></li>
             {!loggedIn ? (<LogIn login={login} />) :
                 (<>
                     <LoggedIn user={user} logout={logout} />

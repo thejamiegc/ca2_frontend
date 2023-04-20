@@ -18,7 +18,7 @@ const login = (user, password) => {
 }
 
 const fetchData = (ressource) => {
-    const options = makeOptions("GET",true); //True add's the token
+    const options = makeOptions("GET",true); //True adds the token
    return fetch(baseURL + ressource, options).then(handleHttpErrors);
 }
 const makeOptions= (method,addToken,body) =>{
